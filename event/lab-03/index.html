@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event lab 3</title>
+</head>
+<body>
+
+    <!-- จงสร้าง Form ที่มี Button สำหรับ submit form -->
+    <form action="https://google.com" >
+        <button>Submit form</button>
+    </form>
+
+<script>
+
+    const form = document.querySelector('form');
+    form.addEventListener('click' , function(event){
+        event.preventDefault();
+
+    });
+
+
+</script>
+
+    
+</body>
+</html>
+
+<!--
+จงสร้าง Form ที่มี Button สำหรับ submit form
+และเขียนคำสั่งเพื่อยกเลิกการส่ง request ไปที่ server เมื่อผู้ใช้งานกด submit form
+ -->

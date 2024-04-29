@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event lab 09</title>
+</head>
+<body>
+
+    <!-- จงสร้าง Input และ Button ดังรูปเมื่อผู้ใช้กรอกเบอร์โทรและกด Check -->
+    <form>
+        <input type="text" name="phoneNumber">
+        <button type="button" id="checkPhoneNumber">check</button>
+        <p hidden id="er1" style="color:red">Phone Number is required</p>
+        <p hidden id="er2" style="color:red">Phone Number is invalid</p>
+        <p hidden id="er3" style="color:red">Invalid length</p>
+
+    </form>
+
+    <script>
+        const input = document.querySelector("input");
+        const btn = document.getElementById('checkPhoneNumber');
+        const ptxt1 = document.getElementById('er1');
+        const ptxt2 = document.getElementById('er2');
+        const ptxt3 = document.getElementById('er3');
+        let message;
+
+        function inputChange(event){
+            // console.log(event.target.value)
+            message = event.target.value;
+            ptxt1.setAttribute('hidden', true)
+            ptxt2.setAttribute('hidden', true)
+            ptxt3.setAttribute('hidden', true)
+            console.log(message)
+        }
+
+        input.addEventListener('input' , inputChange);
+        
+        function btnCheck(){
+            
+            // let messageInput = input.value;
+       //validation check
+    //    console.log("message: ",message)
+            if(message == ''){
+                // display message warning
+                console.log('Phone Number is required')
+                ptxt1.removeAttribute('hidden', true)
+            }else if (message?.search(/[^0-9]+/) !== -1){
+                // display message warning
+                console.log('Phone Number is invalid')
+                ptxt2.removeAttribute('hidden', true)
+            }else if (message.length !== 10){
+                ptxt3.removeAttribute('hidden', true)
+                console.log('Invalid length')
+            }else {
+                alert('Your number is valid')
+            }
+        };
+
+
+
+        //ต้องเรียก obj ที่เป็น Dom เพื่อมา addEvent
+        btn.addEventListener('click' , btnCheck);
+    
+    </script>
+
+
+    
+</body>
+</html>
+
+<!-- 
+จงสร้าง Input และ Button ดังรูปเมื่อผู้ใช้กรอกเบอร์โทรและกด Check
+ถ้าผู้ใช้ไม่กรอกให้ขึ้นข้อความ Phone Number is required
+ถ้าผู้ใช้กรอกค่าที่ไม่ใช่ตัวเลขให้ขึ้นข้อความ Phone Number is invalid
+ถ้าผู้ใช้กรอกค่าที่มีความยาวไม่เท่ากับ 10 ให้ขึ้นข้อความ Invalid length
+ถ้ากรอกถูกต้องให้ Alert “Your number is valid”
+
+ -->

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event lab 06</title>
+</head>
+<body>
+
+    <form>
+        <button type="button">“Click to hide me”</button>
+    </form>
+
+    <script>
+        const btn = document.querySelector('form');
+        btn.addEventListener('click' , function(){
+            btn.style.visibility = "hidden";
+        })
+
+    </script>
+
+
+    
+</body>
+</html>
+
+<!-- 
+จงสร้าง Button มีข้อความว่า “Click to hide me”
+เมื่อผู้ใช้ click button ให้ซ่อน button
+
+ -->

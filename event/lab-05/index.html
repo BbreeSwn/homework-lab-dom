@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Lab 05</title>
+</head>
+<body>
+    <form action="#">
+    <!-- จงสร้าง <input> และมี attribute ชื่อ name มีค่าเท่ากับ “nickname” -->
+    <input type="text" name="nickname"  value="nickname">
+
+    <!-- จงสร้าง <input> อีกอันให้มี attribute ชื่อ name มีค่าเท่ากับ “job” -->
+    <input type="text" name="job" value="job">
+    </form>
+
+<script>
+//เมื่อผู้ใช้ click ที่ <input> ให้ console.log ค่า attribute name ของ <input>
+const input1 = document.querySelectorAll('input');
+
+// console.log(input1)
+input1[0].addEventListener('keydown' , function(event){
+    input1[0].getAttribute('name')
+    console.log(input1[0].getAttribute('name'));
+    
+});
+
+input1[1].addEventListener('keydown' , function(event){
+    input1[1].getAttribute('name')
+    console.log(input1[1].getAttribute('name'));
+});
+
+console.log(event.target);
+
+
+
+
+
+
+
+</script>
+ 
+    
+
+
+</body>
+</html>
+
+<!-- 
+จงสร้าง <input> และมี attribute ชื่อ name มีค่าเท่ากับ “nickname”
+จงสร้าง <input> อีกอันให้มี attribute ชื่อ name มีค่าเท่ากับ “job”
+เมื่อผู้ใช้ click ที่ <input> ให้ console.log ค่า attribute name ของ <input>
+เมื่อผู้ใช้พิมพ์ค่าลงใน <input> ให้ console.log ค่าที่ผู้ใช้พิมพ์
+Hint: event.target และ oninput event
+
+ -->

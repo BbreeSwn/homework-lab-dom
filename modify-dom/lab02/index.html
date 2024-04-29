@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Modify 02</title>
+</head>
+<body>
+
+<script>
+const ul = document.createElement('ul'); //<ul> ต้องสร้าง li ให้เข้ามาอยู่ใน ul
+// let text = prompt('Enter message'); // string , null
+// //text === null || text.trim() === ''
+// while(!(text === null || text.trim() === '')) {
+//     const li = document.createElement('li')  // <li></li>
+//     li.textContent = text; // <li> ที่user ส่งเข้ามา </li>
+//     ul.append(li) // <ul><li> user ส่งเข้ามา </li></ul>
+//     text = prompt('Enter message');
+// ทำได้ 2 แบบ
+// }
+while (1) {
+    text = prompt('Enter message');
+    if (text === null || text.trim() === '') break;
+    const li = document.createElement('li')
+    li.textContent = text;
+    ul.append(li);
+}
+
+document.body.prepend(ul)
+        
+    </script>
+    
+</body>
+</html>
+
+
+<!--
+จงสร้าง <ul>
+เขียนคำสั่ง prompt เพื่อรับข้อความ
+นำข้อความที่ได้มาสร้าง <li> และ เพิ่มเข้าไปใน <ul>
+เพิ่มไปเรื่อยๆจนกว่าผู้ใช้จะกด Cancel หรือ พิมพ์ข้อความว่าง
+ -->

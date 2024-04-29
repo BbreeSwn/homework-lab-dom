@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event lab 07</title>
+</head>
+<body>
+
+        <p id="hide">Text</p>
+        <button id="button">Click to hide Text</button>
+        
+
+    <script>
+        const hideText = document.getElementById('hide');
+        const btn = document.getElementById('button');
+
+       function hiddenText(){
+        hideText.style.visibility = "hidden"
+       };
+
+       btn.addEventListener('click' , hiddenText);
+
+    </script>
+    
+</body>
+</html>
+
+<!-- 
+จงสร้าง Button มีข้อความว่า “Click to hide text”
+เมื่อผู้ใช้ click button ให้ซ่อน Text
+
+ -->

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Modify 03</title>
+</head>
+<body>
+    <ol id="elem">
+        <li>Hello</li>
+        <li>World</li>
+      </ol>
+
+      <script>
+        function clear(elem) { 
+            let liClear = document.querySelector('ol'); // ประกาศกล่องมารับ ol 
+            liClear.innerHTML = '' ; // set inner ให้เป็นสตริงว่างเพื่อลบ li
+        }
+        clear(elem); // clears the list
+
+      </script>
+      
+</body>
+</html>
+
+
+<!-- 
+    จงเขียนฟังก์ชัน clear(elem) เพื่อลบ <li> ภายใน <ol> ทั้งหมด
+
+ -->
